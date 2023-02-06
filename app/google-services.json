@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "52233908684",
+    "project_id": "karibu-app-558b4",
+    "storage_bucket": "karibu-app-558b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52233908684:android:78e8ec149fffd107caad69",
+        "android_client_info": {
+          "package_name": "com.pauljuma.karibuapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52233908684-4ad4rhuhag44gsbq93pv3tfh0j2a3i0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuYPX7_iiSn0HBlAsivSSN2BmA3IutmsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52233908684-4ad4rhuhag44gsbq93pv3tfh0j2a3i0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
