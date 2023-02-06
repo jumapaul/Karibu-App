@@ -1,55 +1,8 @@
-# KarubuApp
-Project Participants 
+### Karibu App
+#### Problem statement
+We all have been in  situation where you go to a restaurant and have  to wait for sometimes for you to be attended to. Or, you enter into a restaurant and you hve to look at the menu to see what is available, the price and make order. This also will take some times to be served. Basically this result to time wastage or leads to a rush especially when there is a meeting or an important occassion to attend to. This is where the karibu app comes into action.
+Imagine a situation where you could choose the closest restaurant near you, make orders and payment online. This works such that when you arrive at your choosen restaurant, you get your table ready with the meals that you ordered for. This results into conserving time since you get in, eat and leave. No more waiting at the table when you are in there. Seems interesting right?
 
-1.James Ambole  email: jamesambole@gmail.com + 254 722 435 213 Project Team Lead
-2.Paul Juma email:pauljuma736@gmail.com+254 758 343717
-3.Aneesa Francis email:afrancis2609@gmail.com + 27832988686
-4.Trynos Tavaziva Mzondo email:trynosm68@gmail.com +263773710713
-5.	                                  email amusarosaq27@gmail.com
-6. Richard Njego email:njegorich@gmail.com +256753464430
-
-# Projects Supervisor
-Samaila Anthony Malima Email: samuelmalima09@gmail.com +2347066446567
-
-
-Development Outline 
-===Requirements
-
-Login Fragments
-- Administration
-- Local users
-
-Home Fragment
-- Foods & prices
-- Likes
-NB: The food recycle view should be such that if selected, it opens a menu item for the user to enter the number of plates for that particular dish depending on the number of guest or the guest who will take that meal.
-
-Basket Fragment
-This fragment shows the users selections for the meal.
-- Meals selected.
-- The total prices.
-NB: The total price should be a live data so that when a meal is added to the basket, it adds automatically.
-This fragment should have a button that performs STK push. It means that once the total is tallied, the user clicks the button and he/she gets a prompt to enter the mpesa pin and the payment is done automatically.
-
-Table selection Fragment
-- We can have something like an image of seats that shows the seats that have not been booked and those that are already booked.
-- We can make it such that the booked one are turned to grey color.
-
-Booking details
-- To ensure the booking is done properly we should have a fragment that shows the details of the booking.
-
-Guest Fragments
-- Here, we shows the guest arrival date and time.
-
-Bottom navigation
-Home page
-Basket
-Booking details
-
-
-
-For the admin
-We need to make it such that the admin can see the live bookings. The live booking should be arranged such that the one to come time sooner to be at the top.
-
-
-Supervisor https://community.andela.com/u/170cc801? Samaila Anthony Malima 
+#### Target customers
+The target here is to save the little time that the customer has. This means it really convenient for the customer with a very limited time. This is for example, the office workers during the breaks. And, the customers at a rush to attend to something.
+This does not mean that there is an exclusion, no. You can book a restaurant for parties, dinners, etc. The big deal is that when you arrive at our restaurants, everything is obsolutely ready.
