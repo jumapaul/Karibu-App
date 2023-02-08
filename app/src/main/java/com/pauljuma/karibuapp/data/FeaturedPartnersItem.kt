@@ -10,5 +10,6 @@ data class FeaturedPartnersItem(
     @PrimaryKey(autoGenerate = false)
     val id: String,
     val name: String,
-    val location: String
+    val location: String,
+    val imageUrl: String?
 )

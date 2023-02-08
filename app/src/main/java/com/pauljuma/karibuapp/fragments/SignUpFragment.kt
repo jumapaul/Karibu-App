@@ -2,7 +2,6 @@ package com.pauljuma.karibuapp.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException
-import com.pauljuma.karibuapp.HomeActivity
+import com.pauljuma.karibuapp.activities.HomeActivity
 import com.pauljuma.karibuapp.R
 import com.pauljuma.karibuapp.databinding.FragmentSignUpBinding
 import kotlinx.coroutines.CoroutineScope
@@ -42,7 +38,7 @@ class SignUpFragment : Fragment() {
         }
 
         binding.tvSignIn.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
 
         return binding.root

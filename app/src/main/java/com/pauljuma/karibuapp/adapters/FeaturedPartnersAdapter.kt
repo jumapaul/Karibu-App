@@ -1,6 +1,7 @@
 package com.pauljuma.karibuapp.adapters
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pauljuma.karibuapp.R
 import com.pauljuma.karibuapp.data.FeaturedPartnersItem
 import com.pauljuma.karibuapp.databinding.FeaturedPartnerRecycleviewBinding
+import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 
 class FeaturedPartnersAdapter :
@@ -16,13 +18,6 @@ class FeaturedPartnersAdapter :
     lateinit var binding: FeaturedPartnerRecycleviewBinding
 
     private val items: MutableList<FeaturedPartnersItem> = ArrayList()
-
-    private val featuredPartnersImage = listOf(
-        R.drawable.burger_inn,
-        R.drawable.ice_cream_inn,
-        R.drawable.pizza_in,
-        R.drawable.dinner_inn
-    )
 
     @SuppressLint("NotifyDataSetChanged")
     fun addItem(data: List<FeaturedPartnersItem>) {
@@ -34,12 +29,13 @@ class FeaturedPartnersAdapter :
     inner class FeaturedPartnerViewHolder(binding: FeaturedPartnerRecycleviewBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(featuredPartnersItem: FeaturedPartnersItem, featuredPartnerImage: List<Int>) {
+        fun bind(featuredPartnersItem: FeaturedPartnersItem) {
             binding.apply {
-                val imageId = (Math.random() * featuredPartnersImage.size).toInt()
                 tvPartnerName.text = featuredPartnersItem.name
                 tvLocation.text = featuredPartnersItem.location
-                Picasso.get().load(featuredPartnerImage[imageId]).into(binding.ivFeaturedPartners)
+                Picasso.get().load(featuredPartnersItem.imageUrl)
+                    .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
+                    .into(binding.ivFeaturedPartners)
 
                 root.setOnClickListener { view ->
                     view.findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
@@ -59,7 +55,7 @@ class FeaturedPartnersAdapter :
     }
 
     override fun onBindViewHolder(holder: FeaturedPartnerViewHolder, position: Int) {
-        holder.bind(items[position], featuredPartnersImage)
+        holder.bind(items[position])
     }
 
     override fun getItemCount(): Int {

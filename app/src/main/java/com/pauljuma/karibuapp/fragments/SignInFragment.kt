@@ -8,8 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.pauljuma.karibuapp.HomeActivity
-import com.pauljuma.karibuapp.R
+import com.pauljuma.karibuapp.activities.HomeActivity
 import com.pauljuma.karibuapp.databinding.FragmentSignInBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

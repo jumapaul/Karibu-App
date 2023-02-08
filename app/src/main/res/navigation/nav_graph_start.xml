@@ -2,35 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/splashScreen">
-    <fragment
-        android:id="@+id/splashScreen"
-        android:name="com.pauljuma.karibuapp.onboards.SplashScreen"
-        android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" >
-        <action
-            android:id="@+id/action_splashScreen_to_viewPager"
-            app:destination="@id/viewPager"
-            app:popUpTo="@id/splashScreen"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_splashScreen_to_loginFragment"
-            app:destination="@id/signUpFragment"
-            app:popUpTo="@id/splashScreen"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
-        android:id="@+id/viewPager"
-        android:name="com.pauljuma.karibuapp.onboards.viewpager.ViewPager"
-        android:label="fragment_view_pager"
-        tools:layout="@layout/fragment_view_pager" >
-        <action
-            android:id="@+id/action_viewPager_to_loginFragment"
-            app:destination="@id/signUpFragment"
-            app:popUpTo="@id/viewPager"
-            app:popUpToInclusive="true" />
-    </fragment>
+    app:startDestination="@id/signInFragment"
+    android:id="@+id/nav_graph_start">
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.pauljuma.karibuapp.fragments.SignUpFragment"
@@ -44,5 +17,10 @@
         android:id="@+id/signInFragment"
         android:name="com.pauljuma.karibuapp.fragments.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+
 </navigation>

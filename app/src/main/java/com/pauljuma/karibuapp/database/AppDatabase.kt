@@ -9,7 +9,7 @@ import com.pauljuma.karibuapp.data.FeaturedPartnersItem
 
 @Database(
     entities = [FeaturedPartnersItem::class, CartItem::class],
-    version = 9,
+    version = 11,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

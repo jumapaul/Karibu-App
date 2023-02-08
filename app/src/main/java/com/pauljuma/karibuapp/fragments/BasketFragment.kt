@@ -5,8 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.pauljuma.karibuapp.HomeActivity
+import com.pauljuma.karibuapp.activities.HomeActivity
 import com.pauljuma.karibuapp.databinding.FragmentBasketBinding
 import com.pauljuma.karibuapp.viewmodel.CartViewModel
 
