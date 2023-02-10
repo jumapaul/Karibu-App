@@ -7,14 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.GravityCompat
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.pauljuma.karibuapp.activities.HomeActivity
-import com.pauljuma.karibuapp.activities.MainActivity
 import com.pauljuma.karibuapp.R
 import com.pauljuma.karibuapp.activities.Authentication
+import com.pauljuma.karibuapp.activities.PartnersActivity
 import com.pauljuma.karibuapp.adapters.FeaturedPartnersAdapter
 import com.pauljuma.karibuapp.databinding.FragmentHomeBinding
 import com.pauljuma.karibuapp.viewmodel.CartViewModel
@@ -53,7 +52,8 @@ class HomeFragment : Fragment() {
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
 
         viewBinding.tvSearch.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+            val intent = Intent(requireContext(), PartnersActivity::class.java)
+            startActivity(intent)
         }
 
         viewBinding.riProfile.setOnClickListener {

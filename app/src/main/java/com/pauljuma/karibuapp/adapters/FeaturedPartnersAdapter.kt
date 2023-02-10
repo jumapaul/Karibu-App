@@ -38,7 +38,7 @@ class FeaturedPartnersAdapter :
                     .into(binding.ivFeaturedPartners)
 
                 root.setOnClickListener { view ->
-                    view.findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+                   // view.findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
                 }
             }
         }
