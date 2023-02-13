@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".fragments.CategoriesFragment">
+    tools:context=".ui.fragments.CategoriesFragment">
 
     <TextView
         android:id="@+id/tvRestaurantNameHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/semi_bold"
-        android:padding="5dp"
         android:text="Paul restaurant"
         android:textColor="#008b8b"
         android:textSize="18sp"

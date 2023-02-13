@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/ivBasketItem"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="@+id/ivBasketItem" />
 
     <TextView
-        android:id="@+id/tvBasketItemAmount"
+        android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toEndOf="@+id/ivBasketItem"
-        app:layout_constraintTop_toBottomOf="@+id/tvBasketItemAmount">
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice">
 
         <ImageView
             android:id="@+id/ivAdd"

@@ -10,6 +10,8 @@
     <string name="username">UserName</string>
     <string name="Password">Password</string>
     <!-- Strings related to login -->
+    <string name="partnerName">partnerName</string>
+    <string name="location">location</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>

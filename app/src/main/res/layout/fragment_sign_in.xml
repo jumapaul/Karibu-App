@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:background="@drawable/grosgater"
-    tools:context=".fragments.SignInFragment">
+    tools:context=".ui.fragments.SignInFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -148,7 +148,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvSignRegister"
+            android:id="@+id/tvRegister"
             android:text="Register"
             android:textSize="16sp"
             android:fontFamily="@font/medium"

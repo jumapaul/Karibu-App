@@ -6,7 +6,7 @@
     android:id="@+id/nav_graph_start">
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.pauljuma.karibuapp.fragments.SignUpFragment"
+        android:name="com.pauljuma.karibuapp.ui.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.pauljuma.karibuapp.fragments.SignInFragment"
+        android:name="com.pauljuma.karibuapp.ui.fragments.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
