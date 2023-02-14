@@ -4,16 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:padding="5dp"
+    >
 
-    <ImageView
-        android:id="@+id/ivBasketItem"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="200dp"
         android:layout_height="130dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/holder_item"
+        app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBasketItem"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/holder_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvBasketItemName"
@@ -23,8 +34,8 @@
         android:fontFamily="@font/semi_bold"
         android:padding="5dp"
         android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/ivBasketItem"
-        app:layout_constraintTop_toTopOf="@+id/ivBasketItem" />
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/tvPrice"
@@ -34,7 +45,7 @@
         android:fontFamily="@font/semi_bold"
         android:padding="5dp"
         android:text="ksh 300"
-        app:layout_constraintStart_toEndOf="@+id/ivBasketItem"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/tvBasketItemName" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -42,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@+id/ivBasketItem"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/tvPrice">
 
         <ImageView
@@ -81,9 +92,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="Remove"
         android:backgroundTint="#ffcc99"
+        android:text="Remove"
         app:drawableLeftCompat="@drawable/ic_baseline_delete"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivBasketItem" />
+        app:layout_constraintStart_toEndOf="@+id/cardView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

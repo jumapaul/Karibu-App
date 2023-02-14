@@ -4,30 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
+    android:padding="3dp"
     tools:context=".ui.fragments.categories.DessertsFragment">
 
     <TextView
-        android:id="@+id/tvDesserts"
+        android:id="@+id/tvBreakfast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/semi_bold"
+        android:fontFamily="@font/bold"
         android:text="Desserts and slides"
         android:textAlignment="center"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/rvDesserts"
+        app:layout_constraintBottom_toTopOf="@+id/rvDessert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDesserts"
+        android:id="@+id/rvDessert"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDesserts"
+        app:layout_constraintTop_toBottomOf="@+id/tvBreakfast"
         tools:listitem="@layout/basket_recycleview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

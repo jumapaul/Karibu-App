@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso
 
 class CategoryAdapter(
     val context: Context,
-    val categoryList: ArrayList<CategoryData>,
+    private val categoryList: ArrayList<CategoryData>,
     val navController: NavController
 ) :
     RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
@@ -33,8 +33,6 @@ class CategoryAdapter(
                 this@CategoryViewHolder.currentData = categoryData
 
                 btnClickHere.setOnClickListener { view ->
-                    Log.d("Route:::::", "bind: ${navController.currentDestination}")
-
                     navController.navigateUp()
                     when (categoryData.sectionNames.lowercase()) {
                         "drinks" -> navController

@@ -24,7 +24,7 @@ class SearchActivity : AppCompatActivity() {
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        searchAdapter = SearchAdapter()
+        searchAdapter = SearchAdapter(this)
 
         val database = AppDatabase(this)
         val karibuRepository = KaribuRepository(database)

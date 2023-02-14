@@ -16,7 +16,13 @@ import com.pauljuma.karibuapp.databinding.FragmentCategoriesBinding
 
 class CategoriesFragment : Fragment() {
     lateinit var binding: FragmentCategoriesBinding
-    private val categoryAdapter: CategoryAdapter by lazy { CategoryAdapter(requireContext(), Category.categoryList!!, findNavController()) }
+    private val categoryAdapter: CategoryAdapter by lazy {
+        CategoryAdapter(
+            requireContext(),
+            Category.categoryList!!,
+            findNavController()
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +38,12 @@ class CategoriesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val pref = SharedPreferenceUtil(requireContext())
         val partnerName = pref.getString("name")
-        binding.tvRestaurantNameHeader.setText(partnerName)
+        val location = pref.getString("location")
+
+        binding.apply {
+            tvRestaurantNameHeader.setText(partnerName)
+            tvLocationNameTitle.setText(location)
+        }
     }
 
     private fun setUpCategoryRecycleview() {

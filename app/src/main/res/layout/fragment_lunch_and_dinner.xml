@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
+    android:padding="3dp"
     tools:context=".ui.fragments.categories.LunchAndDinnerFragment">
 
     <TextView
         android:id="@+id/tvLunch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/semi_bold"
+        android:fontFamily="@font/bold"
         android:text="Lunch and Dinner"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -24,6 +24,7 @@
         android:id="@+id/rvLunch"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

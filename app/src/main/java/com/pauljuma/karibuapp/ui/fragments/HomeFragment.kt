@@ -27,7 +27,6 @@ class HomeFragment : Fragment() {
         )
     }
     private lateinit var viewBinding: FragmentHomeBinding
-    lateinit var cartViewModel: CartViewModel
     lateinit var featuredPartnersViewModel: FeaturedPartnersViewModel
 
     override fun onCreateView(
@@ -36,7 +35,6 @@ class HomeFragment : Fragment() {
     ): View? {
 
         viewBinding = FragmentHomeBinding.inflate(inflater, container, false)
-        cartViewModel = (activity as HomeActivity).cartViewModel
         featuredPartnersViewModel = (activity as HomeActivity).featuredPartnerViewModel
 
         observeFeaturedPartners()

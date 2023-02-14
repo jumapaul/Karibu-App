@@ -1,6 +1,7 @@
 package com.pauljuma.karibuapp.ui.adapters
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.MutableLiveData
@@ -23,10 +24,11 @@ class DrinksAdapter: RecyclerView.Adapter<DrinksAdapter.DrinksAdapterViewHolder>
 
     }
     inner class DrinksAdapterViewHolder(binding: BasketRecycleviewBinding): RecyclerView.ViewHolder(binding.root){
+        @SuppressLint("SetTextI18n")
         fun bind(meal: Meal){
             binding.apply {
                 tvBasketItemName.text = meal.name
-                tvPrice.text = meal.price.toString()
+                tvPrice.text = "ksh ${meal.price}"
                 Picasso.get().load(meal.imageUrl).into(binding.ivBasketItem)
             }
         }
@@ -43,6 +45,7 @@ class DrinksAdapter: RecyclerView.Adapter<DrinksAdapter.DrinksAdapterViewHolder>
     }
 
     override fun getItemCount(): Int {
+        Log.d("here==========================>","${drinks.size}")
         return drinks.size
     }
 }
