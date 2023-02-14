@@ -6,6 +6,8 @@ import com.pauljuma.karibuapp.data.model.local.Meal
 import com.pauljuma.karibuapp.data.model.local.MealType
 import com.pauljuma.karibuapp.domain.network.KaribuApiInstance
 import com.pauljuma.karibuapp.domain.network.SectionApiInstance
+import com.pauljuma.karibuapp.utils.Resource
+import retrofit2.Response
 
 class KaribuRepository(val db: AppDatabase) {
 

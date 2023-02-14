@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pauljuma.karibuapp.R
 import com.pauljuma.karibuapp.data.model.local.Meal
 import com.pauljuma.karibuapp.data.model.local.MealType
+import com.pauljuma.karibuapp.databinding.AddCartRecycleviewBinding
 import com.pauljuma.karibuapp.databinding.BasketRecycleviewBinding
 import com.squareup.picasso.Picasso
 
 class DrinksAdapter: RecyclerView.Adapter<DrinksAdapter.DrinksAdapterViewHolder>(){
-    lateinit var binding: BasketRecycleviewBinding
+    lateinit var binding: AddCartRecycleviewBinding
     var drinks: MutableList<Meal> = ArrayList()
 
     @SuppressLint("NotifyDataSetChanged")
@@ -23,19 +24,19 @@ class DrinksAdapter: RecyclerView.Adapter<DrinksAdapter.DrinksAdapterViewHolder>
         notifyDataSetChanged()
 
     }
-    inner class DrinksAdapterViewHolder(binding: BasketRecycleviewBinding): RecyclerView.ViewHolder(binding.root){
+    inner class DrinksAdapterViewHolder(binding: AddCartRecycleviewBinding): RecyclerView.ViewHolder(binding.root){
         @SuppressLint("SetTextI18n")
         fun bind(meal: Meal){
             binding.apply {
-                tvBasketItemName.text = meal.name
-                tvPrice.text = "ksh ${meal.price}"
-                Picasso.get().load(meal.imageUrl).into(binding.ivBasketItem)
+                tvName.text = meal.name
+                tvFavoritePrice.text = "ksh ${meal.price}"
+                Picasso.get().load(meal.imageUrl).into(binding.ivFoodItem)
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DrinksAdapterViewHolder {
-        binding = BasketRecycleviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = AddCartRecycleviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return DrinksAdapterViewHolder(binding)
     }

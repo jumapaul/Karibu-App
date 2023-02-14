@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.pauljuma.karibuapp.data.model.local.Meal
+import com.pauljuma.karibuapp.databinding.AddCartRecycleviewBinding
 import com.pauljuma.karibuapp.databinding.BasketRecycleviewBinding
 import com.squareup.picasso.Picasso
 
 class BreakfastAdapter: RecyclerView.Adapter<BreakfastAdapter.BreakfastViewHolder>() {
 
-    lateinit var binding: BasketRecycleviewBinding
+    lateinit var binding: AddCartRecycleviewBinding
     val breakfast: MutableList<Meal> = ArrayList()
 
     @SuppressLint("NotifyDataSetChanged")
@@ -21,19 +22,19 @@ class BreakfastAdapter: RecyclerView.Adapter<BreakfastAdapter.BreakfastViewHolde
     }
 
 
-    inner class BreakfastViewHolder(binding: BasketRecycleviewBinding): RecyclerView.ViewHolder(binding.root){
+    inner class BreakfastViewHolder(binding: AddCartRecycleviewBinding): RecyclerView.ViewHolder(binding.root){
         @SuppressLint("SetTextI18n")
         fun bind(meal: Meal){
             binding.apply {
-                tvBasketItemName.text = meal.name
-                tvPrice.text = "ksh ${meal.price}"
-                Picasso.get().load(meal.imageUrl).into(ivBasketItem)
+                tvName.text = meal.name
+                tvFavoritePrice.text = "ksh ${meal.price}"
+                Picasso.get().load(meal.imageUrl).into(ivFoodItem)
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BreakfastViewHolder {
-        binding = BasketRecycleviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = AddCartRecycleviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return BreakfastViewHolder(binding)
     }

@@ -2,6 +2,8 @@ package com.pauljuma.karibuapp.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,6 +14,10 @@ import com.pauljuma.karibuapp.domain.repository.KaribuRepository
 import com.pauljuma.karibuapp.ui.adapters.SearchAdapter
 import com.pauljuma.karibuapp.ui.viewmodel.search.SearchViewModel
 import com.pauljuma.karibuapp.ui.viewmodel.search.SearchViewModelFactory
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SearchActivity : AppCompatActivity() {
     lateinit var binding: ActivitySearchBinding
@@ -34,10 +40,16 @@ class SearchActivity : AppCompatActivity() {
             ViewModelProvider(this, searchViewModelFactory).get(SearchViewModel::class.java)
 
         observeSearchRecycleview()
+
+        binding.etSearch.addTextChangedListener { editable ->
+            val items = searchViewModel.searchItem.value?.filter { it.name.lowercase().contains(editable.toString().lowercase()) }
+            searchAdapter.addItem(items?: emptyList())
+            setUpSearchRecycleview()
+        }
     }
 
     private fun observeSearchRecycleview() {
-        searchViewModel.searchItem.observe(this){
+        searchViewModel.searchItem.observe(this) {
             searchAdapter.addItem(it)
             setUpSearchRecycleview()
         }

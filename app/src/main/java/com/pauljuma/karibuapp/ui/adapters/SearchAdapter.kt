@@ -22,11 +22,14 @@ class SearchAdapter(val activity: Activity) :
     RecyclerView.Adapter<SearchAdapter.SearchViewHolder>() {
     lateinit var binding: SearchRecycleviewBinding
     private val searchItem: MutableList<FeaturedPartnersItem> = ArrayList()
+    private val items: MutableList<FeaturedPartnersItem> = ArrayList()
 
     @SuppressLint("NotifyDataSetChanged")
     fun addItem(data: List<FeaturedPartnersItem>) {
         searchItem.clear()
+        items.clear()
         searchItem.addAll(data)
+        items.addAll(data)
         notifyDataSetChanged()
     }
 
